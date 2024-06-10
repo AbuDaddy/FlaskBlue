@@ -1,8 +1,9 @@
 from flaskblue import app
+from flask import render_template
 
 @app.route('/')
 def home():
-    return '<h1>Hello world!</h1>'
+    return render_template('layout.html', title='Home')
 
 @app.route('/about')
 def about():
