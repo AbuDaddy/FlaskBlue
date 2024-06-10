@@ -1,10 +1,10 @@
 from flaskblue import app
-from flask import render_template
+from flask import render_template, url_for
 
 @app.route('/')
 def home():
-    return render_template('layout.html', title='Home')
+    return render_template('home.html', title='Home')
 
 @app.route('/about')
 def about():
-    return 'About Me'
+    return render_template('about.html', title='About')
